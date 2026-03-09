@@ -1,0 +1,7 @@
+sqrt(16)
+sqrt(25)
+sqrt(-4)
+sqrt(144)
+sqrt(2)
+sqrt(sqrt(81))
+

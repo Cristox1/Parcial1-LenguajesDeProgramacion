@@ -1,0 +1,47 @@
+Documentacion Parcial 1 - Lenguajes de programacion - Cristian Andres Reinales
+
+Punto 1:
+Para este primer punto debemos crear un automata en pyhon el cual reciba expresiones regulares del lenguaje El conjunto de movimientos del ajedrez como p->k4 o kbp X qn]. Segun como lo entiendo el lenguaje caepta expresiones formadas por [a-z]->[a-z][0-9] y [a-z]+ X [A − Za − z]+.
+Luego para comprobar que funciona el programa imprime si ACEPTA o RECHAZA.
+
+Punto 2:
+Para el segundo punto simplemente debiamos crear un automata en python el cual identificara un lenguaje de ID's los cuales tienen expresiones formadas de la siguiente foma: [A − Za − z][A − Za − z0 − 9] *
+Esto es sencillo, para esto lo nomas necesitamos dos estados, el primero el cual debe recibir como primer entrada un caracter, si esto pasa pasa al segundo estado y de aceptacion, este estado puede recibir letras y numeros las veces que quiera, y seguira estando en un estado de aceptacion, pero si entra algun simbolo extraño en la cadena, se envia a un estado de error y no acepta la cadena.
+
+Punto 3:
+Para este ejercicio debemos implementar una calculadora utilizando fex y bison, para esto tenemos tambien el metodo de Newton Raphson, este es un metodo que utiliza las derivadas para poder hallar la raiz. Para la implementacion tuvimos que crear los dos archivos punto3.l y punto3.y.
+En el archivo de punto3.l no agregamos gran cosa de momento, lo unico que hacemos es crear el lexema "sqrt" con un token TOK_SQRT para que la gramatica entienda esta palabra reservada.
+Luego en el archivo punto3.y es donde implementamos el metodo de Newton Raphson y aqui es donde esta la logica de la solucion para este problema.
+Finalmente tenemos tambien un archivo llamado entrada.txt en el que hay algunos ejemplos para probar el codigo.
+
+Punto4:
+Para este cuarto punto debemos comparar el rendimiento de un lenguaje de programacion compilado y un lenguaje de programacion interpretado.
+Para nuestro analisis implemente de manera muy sencilla una funcion recursiva para hallar fibonacci tanto en C (compilado) como en Python (interpretado) y en el proceso de ejecucion comparar sus tiempos de ejecucion a ver cual es mejor.
+Al ejecutar ambos programas valor de 40 para hacer la secuencia de fibonacci nos dio los siguientes resultados:
+
+cristoxal@cristoxal-VivoBook-ASUSLaptop-X513EAN-K513EA:~/Documentos/Lenguajes de Programacion/Parcial1/Punto4$ python3 rendimiento.py
+Calculando Fibonacci recursiva
+Resultado: 102334155
+Tiempo de ejecucion: 13.879773 segundos
+
+cristoxal@cristoxal-VivoBook-ASUSLaptop-X513EAN-K513EA:~/Documentos/Lenguajes de Programacion/Parcial1/Punto4$ gcc rendimiento.c -o RendimientoC
+cristoxal@cristoxal-VivoBook-ASUSLaptop-X513EAN-K513EA:~/Documentos/Lenguajes de Programacion/Parcial1/Punto4$ ./RendimientoC
+Resultado: 102334155
+
+Asi que podemos ver como un lenguaje compilado es mucho mas rapido y eficiente que un lenguaje de programacion interpretado.
+
+
+Punto 5:
+Para este quinto punto debeos crear un programa en ANTLR4 en python el cual calcule la secuencia de Fibonacci.
+Para esto en nuestro archivo de la gramatica .g4 lo unico que tuvimos que definir fue una unica regla la cual fue la de FIBO(INT). Luego en nuestro archivo main.py escribimos toda la logrica para las iteraciones y generacion de valores de fibonacci guardandolos en una lista, para luego mostrarla por consola. La logica para fibonacci aca es muy sencilla y se soluciona en un While.
+Al ejecutar nuestro programa obtenemos los siguientes resultados:
+
+ Programacion/Parcial1/Punto5$ python3 main.py
+Calculadora Fibonacci
+Ejemplo: FIBO(NUMERO)
+'salir' para terminar el programa.
+
+>> FIBO(15)
+0, 1, 1, 2, 3, 5, 8, 13
+ 
+
