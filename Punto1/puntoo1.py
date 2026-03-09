@@ -56,7 +56,6 @@ def validar_jugada_chess(string_movimiento):
                 nodo_actual = -1
                 
         elif nodo_actual == 7:
-            # si ya leimos el numero (ej. k4) ya no puede haber mas nada, si mete mas lo mando al estado de error
             nodo_actual = -1
             
         if nodo_actual == -1:
@@ -70,13 +69,11 @@ def validar_jugada_chess(string_movimiento):
 
 if __name__ == "__main__":
     
-    # meto los ejemplos del taller mas unos mios para probar bien la logica
-    lista_de_pruebas = ["p->k4", "kbp X qn", "q->r8", "n X p"]
+    lista_de_pruebas = ["p->k4", "kbp X qn", "q->r8", "n X p"] # meto los ejemplos del taller mas unos mios para probar bien la logica
 
     for prueba in lista_de_pruebas:
         es_valido = validar_jugada_chess(prueba)
         
-        # uso el == True por costumbre jaja
         if es_valido == True:
             print("ACEPTA  -> " + prueba)
         else:
