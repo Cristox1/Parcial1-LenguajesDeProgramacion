@@ -70,7 +70,7 @@ double newton_raphson_sqrt(double S) {
         if (fabs(x_n - x_siguiente) < tolerancia) {
             break;
         }
-        x_n = x_siguiente; // Actualizamos para la siguiente iteración
+        x_n = x_siguiente;
     }
        
     return x_siguiente;

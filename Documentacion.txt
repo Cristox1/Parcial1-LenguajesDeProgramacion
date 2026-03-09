@@ -16,7 +16,7 @@ Finalmente tenemos tambien un archivo llamado entrada.txt en el que hay algunos 
 
 Punto4:
 Para este cuarto punto debemos comparar el rendimiento de un lenguaje de programacion compilado y un lenguaje de programacion interpretado.
-Para nuestro analisis implemente de manera muy sencilla una funcion recursiva para hallar fibonacci tanto en C (compilado) como en Python (interpretado) y en el proceso de ejecucion comparar sus tiempos de ejecucion a ver cual es mejor.
+Para nuestro analisis implemente de manera muy sencilla una funcion recursiva para hallar fibonacci tanto en C (compilado) como en Python (interpretado) y en el proceso de ejecucion comparar sus tiempos de ejecucion a ver cual es mejor. Para poder comparar los tiempos de ejecucion de cada algoritmo, vamos a utilizar librerias time tanto en C como en Python. estas librerias nos permiten iniciar 'temporizadores' dentro de la ejecucion del algoritmo.
 Al ejecutar ambos programas valor de 40 para hacer la secuencia de fibonacci nos dio los siguientes resultados:
 
 cristoxal@cristoxal-VivoBook-ASUSLaptop-X513EAN-K513EA:~/Documentos/Lenguajes de Programacion/Parcial1/Punto4$ python3 rendimiento.py

@@ -32,7 +32,7 @@ def revisar_si_es_id(palabra_ingresada):
 
 if __name__ == "__main__":
     
-    cadenas_test = ["x", "Variable123", "sumaTotal", "123contador", "mi_variable"]
+    cadenas_test = ["variable1", "Cristian", "Andres321", "1Reinales", "ID"]
 
     for prueba in cadenas_test:
         

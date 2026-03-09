@@ -69,7 +69,7 @@ def validar_jugada_chess(string_movimiento):
 
 if __name__ == "__main__":
     
-    lista_de_pruebas = ["p->k4", "kbp X qn", "q->r8", "n X p"] # meto los ejemplos del taller mas unos mios para probar bien la logica
+    lista_de_pruebas = ["p->k4", "kbp X qn", "q->r8", "n X p"] # meto los ejemplos mas unos mios para probar bien la logica
 
     for prueba in lista_de_pruebas:
         es_valido = validar_jugada_chess(prueba)
