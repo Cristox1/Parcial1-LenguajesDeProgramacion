@@ -15,5 +15,5 @@ if __name__ == "__main__":
     fin = time.time()
     tiempo_gastado = fin - inicio
     
-    print(f"Resultado: {resultado}")
-    print(f"Tiempo de ejecucion: {tiempo_gastado:.6f} segundos")
+    print("Resultado", resultado)
+    print(f"Tiempo de ejecucion:", tiempo_gastado)

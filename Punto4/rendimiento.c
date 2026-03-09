@@ -18,8 +18,8 @@ int main() {
     clock_t fin = clock();
     double tiempo_gastado = (double)(fin - inicio) / CLOCKS_PER_SEC;
     
-    printf("Resultado: %lld\n", resultado);
-    printf("Tiempo de ejecucion: %f segundos\n", tiempo_gastado);
+    printf("Resultado: ", resultado);
+    printf("Tiempo de ejecucion: ", tiempo_gastado);
     
     return 0;
 }

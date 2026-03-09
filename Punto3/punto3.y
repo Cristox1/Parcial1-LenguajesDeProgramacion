@@ -7,12 +7,10 @@ void yyerror(const char *s);
 int yylex(void);
 extern FILE *yyin; 
 
-/* Declaración del metodo Newton Raphson */
-double newton_raphson_sqrt(double S);
+double newton_raphson_sqrt(double S);/* Declaración del metodo Newton Raphson */
 %}
 
-/* Los tokens van a manejar valores decimales */
-%union {
+%union { /* Los tokens van a manejar valores decimales */
     double val;
 }
 
@@ -23,16 +21,15 @@ double newton_raphson_sqrt(double S);
 
 %left '+' '-'
 %left '*' '/'
-%nonassoc UMINUS /* Menos unario (ej: -5) */
+%nonassoc UMINUS 
 
 %%
 
 /* Reglas Gramaticales */
 calc:
-    /* Vacio */
     | calc exp TOK_EOL { printf("-> Resultado: %f\n", $2); }
-    | calc TOK_EOL     { /* Ignorar lineas en blanco */ }
-    | calc error TOK_EOL { yyerrok; /* Recuperación de error */ }
+    | calc TOK_EOL     {}
+    | calc error TOK_EOL { yyerrok;}
     ;
 
 exp:
@@ -57,7 +54,7 @@ exp:
 
 double newton_raphson_sqrt(double S) {
     if (S < 0) {
-        printf("\n[!] Error: No se puede calcular para numeros negativos (%.2f)\n", S);
+        printf("\n[!] Error: No se puede calcular numeros negativos (%.2f)\n", S);
         return 0.0;
     }
     if (S == 0) return 0.0;

@@ -1,12 +1,12 @@
 %{
-#include "punto3.tab.h" // <--- ¡AQUÍ ESTÁ EL CAMBIO!
+#include "punto3.tab.h" 
 #include <stdlib.h>
 %}
 
 %%
 
-[ \t]+                   { /* Ignorar espacios y tabulaciones */ }
-\n                       { return TOK_EOL; }  /* Salto de línea como fin de expresión */
+[ \t]+                   {}
+\n                       { return TOK_EOL; }  
 
 "sqrt"|"SQRT"            { return TOK_SQRT; }
 

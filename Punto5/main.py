@@ -24,7 +24,7 @@ class EvaluadorFibo(punto5Visitor):
 def main():
     print("Calculadora Fibonacci")
     print("Ejemplo: FIBO(NUMERO)")
-    print("'salir' para terminar el programa.\n")
+    print("'salir' para terminar el programa.")
     
     while True:
         try:
@@ -50,7 +50,7 @@ def main():
         except EOFError:
             break
         except Exception as e:
-            print(f"Ocurrio un error: {e}")
+            print("Ocurrio un error")
 
 if __name__ == '__main__':
     main()
