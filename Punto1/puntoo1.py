@@ -4,8 +4,7 @@ def validar_jugada_chess(string_movimiento):
     for letra in string_movimiento:
         
         if nodo_actual == 0:
-            # tiene que empezar con letra minuscula si o si
-            if letra >= 'a' and letra <= 'z':
+            if letra >= 'a' and letra <= 'z': # tiene que empezar con letra minuscula si o si
                 nodo_actual = 1
             else:
                 nodo_actual = -1 

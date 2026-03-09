@@ -3,16 +3,43 @@ Documentacion Parcial 1 - Lenguajes de programacion - Cristian Andres Reinales
 Punto 1:
 Para este primer punto debemos crear un automata en pyhon el cual reciba expresiones regulares del lenguaje El conjunto de movimientos del ajedrez como p->k4 o kbp X qn]. Segun como lo entiendo el lenguaje caepta expresiones formadas por [a-z]->[a-z][0-9] y [a-z]+ X [A − Za − z]+.
 Luego para comprobar que funciona el programa imprime si ACEPTA o RECHAZA.
+Al ejecutar nuestro codigo obtenemos:
+ Programacion/Parcial1/Punto1$ python3 puntoo1.py 
+ACEPTA  -> p->k4
+ACEPTA  -> kbp X qn
+ACEPTA  -> q->r8
+ACEPTA  -> n X p
+Vemos que las cadenas que cumplen cumple con las reglas del lenguaje son aceptadas.
 
 Punto 2:
 Para el segundo punto simplemente debiamos crear un automata en python el cual identificara un lenguaje de ID's los cuales tienen expresiones formadas de la siguiente foma: [A − Za − z][A − Za − z0 − 9] *
 Esto es sencillo, para esto lo nomas necesitamos dos estados, el primero el cual debe recibir como primer entrada un caracter, si esto pasa pasa al segundo estado y de aceptacion, este estado puede recibir letras y numeros las veces que quiera, y seguira estando en un estado de aceptacion, pero si entra algun simbolo extraño en la cadena, se envia a un estado de error y no acepta la cadena.
+Ejecutando mi codigo obtenemos el siguiente resultado de la prueba:
+ Programacion/Parcial1/Punto2$ python3 punto2.py 
+SI ACEPTA la cadena -> variable1
+SI ACEPTA la cadena -> Cristian
+SI ACEPTA la cadena -> Andres321
+NO ACEPTA la cadena -> 1Reinales
+SI ACEPTA la cadena -> ID
+Con esto vemos que el funcionamiento del automata es correcto segun las reglas.
 
 Punto 3:
 Para este ejercicio debemos implementar una calculadora utilizando fex y bison, para esto tenemos tambien el metodo de Newton Raphson, este es un metodo que utiliza las derivadas para poder hallar la raiz. Para la implementacion tuvimos que crear los dos archivos punto3.l y punto3.y.
 En el archivo de punto3.l no agregamos gran cosa de momento, lo unico que hacemos es crear el lexema "sqrt" con un token TOK_SQRT para que la gramatica entienda esta palabra reservada.
 Luego en el archivo punto3.y es donde implementamos el metodo de Newton Raphson y aqui es donde esta la logica de la solucion para este problema.
 Finalmente tenemos tambien un archivo llamado entrada.txt en el que hay algunos ejemplos para probar el codigo.
+Al implementar ejecuatar mi codigo obtengo los siguientes resultados para pruebas que puse en un .txt:
+Errorcristoxal@cristoxal-VivoBook-ASUSLaptop-X513EAN-K513EA:~/Documentos/Lenguajes de Programacion/Parcial1/Punto3$ ./Punto3 entrada.txt
+ Caculadora que halla raices: =
+-> Resultado: 4.000000
+-> Resultado: 5.000000
+[!] Error: No se puede calcular para numeros negativos (-4.00)
+-> Resultado: 0.000000
+-> Resultado: 12.000000
+-> Resultado: 1.414214
+-> Resultado: 3.000000
+Analisis finalizado.
+
 
 Punto4:
 Para este cuarto punto debemos comparar el rendimiento de un lenguaje de programacion compilado y un lenguaje de programacion interpretado.
